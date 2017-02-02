@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Albums List View Cotroller-->
+        <scene sceneID="Pff-eL-D3y">
+            <objects>
+                <viewController storyboardIdentifier="VKPAlbumsListViewCotroller" id="6te-tQ-5mk" customClass="VKPAlbumsListViewCotroller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j2b-Zx-zhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="aQH-gI-cv8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T20-st-NhS" customClass="VKPAlbumsListView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-aw-m9g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-dr-5BA">
+                                        <rect key="frame" x="8" y="22" width="48" height="30"/>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="onLogout:" destination="6te-tQ-5mk" eventType="touchUpInside" id="Gi3-cm-0ga"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.8862745098" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CZy-dr-5BA" secondAttribute="bottom" constant="8" id="D8W-pZ-mK4"/>
+                                    <constraint firstItem="CZy-dr-5BA" firstAttribute="leading" secondItem="Zdd-aw-m9g" secondAttribute="leading" constant="8" id="b5z-3M-8Gy"/>
+                                    <constraint firstItem="CZy-dr-5BA" firstAttribute="top" secondItem="Zdd-aw-m9g" secondAttribute="top" constant="22" id="lW3-4t-hpM"/>
+                                    <constraint firstAttribute="height" constant="60" id="wSL-nH-Tlg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-q8-r91">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="6" minY="0.0" maxX="6" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6te-tQ-5mk" id="kqY-Wa-Wa1"/>
+                                    <outlet property="delegate" destination="6te-tQ-5mk" id="fx5-qi-b9O"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rDu-q8-r91" firstAttribute="top" secondItem="Zdd-aw-m9g" secondAttribute="bottom" id="2S5-Qg-2u0"/>
+                            <constraint firstItem="aQH-gI-cv8" firstAttribute="top" secondItem="rDu-q8-r91" secondAttribute="bottom" id="6WP-zx-fxP"/>
+                            <constraint firstAttribute="trailing" secondItem="Zdd-aw-m9g" secondAttribute="trailing" id="K3z-KJ-9tW"/>
+                            <constraint firstItem="Zdd-aw-m9g" firstAttribute="leading" secondItem="T20-st-NhS" secondAttribute="leading" id="KaX-Q7-oUK"/>
+                            <constraint firstItem="Zdd-aw-m9g" firstAttribute="top" secondItem="j2b-Zx-zhc" secondAttribute="bottom" constant="-20" id="N4H-dH-JZr"/>
+                            <constraint firstItem="rDu-q8-r91" firstAttribute="leading" secondItem="T20-st-NhS" secondAttribute="leading" id="h9X-IL-UJw"/>
+                            <constraint firstAttribute="trailing" secondItem="rDu-q8-r91" secondAttribute="trailing" id="iAG-Vs-Yz3"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="albumsListTableView" destination="rDu-q8-r91" id="8AB-R1-go4"/>
+                        </connections>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQZ-ra-h9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+</document>

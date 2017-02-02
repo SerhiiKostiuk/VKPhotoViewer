@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VKPAlbumsListTableViewCell" id="KGk-i7-Jjw" customClass="VKPAlbumsListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rtj-6A-yFq">
+                        <rect key="frame" x="6" y="0.0" width="69" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Rtj-6A-yFq" secondAttribute="height" multiplier="1:1" id="qkG-Lf-suU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPW-Go-pix">
+                        <rect key="frame" x="85" y="24.5" width="202" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Rtj-6A-yFq" secondAttribute="bottom" id="36t-Sj-Cmf"/>
+                    <constraint firstItem="MPW-Go-pix" firstAttribute="leading" secondItem="Rtj-6A-yFq" secondAttribute="trailing" constant="10" id="My9-y3-ehK"/>
+                    <constraint firstItem="MPW-Go-pix" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZZX-cW-Me5"/>
+                    <constraint firstItem="Rtj-6A-yFq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mgO-mJ-8Q5"/>
+                    <constraint firstItem="Rtj-6A-yFq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="obe-4L-Yy8"/>
+                    <constraint firstItem="Rtj-6A-yFq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rSM-E3-iBg"/>
+                    <constraint firstItem="MPW-Go-pix" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" constant="1" id="zv5-V9-59o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumTitleLabel" destination="MPW-Go-pix" id="1Aw-Z6-58F"/>
+                <outlet property="thumbImageView" destination="Rtj-6A-yFq" id="dFJ-qU-Y59"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
