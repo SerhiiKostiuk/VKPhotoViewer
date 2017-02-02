@@ -9,12 +9,9 @@
 @import VK_ios_sdk;
 
 #import "VKPAuthorizationCoordinator.h"
-#import "VKPUserPersistence.h"
-#import "VKPUserPersistenceProtocol.h"
 #import "VKPAuthorizationCoordinatorDelegate.h"
 
-#import "VKPUser.h"
-#import "VKPLoginViewConroller.h"
+#import "VKPLoginViewController.h"
 #import "UIAlertController+KSExtensions.h"
 
 #import "KSMacro.h"
@@ -22,26 +19,23 @@
 KSConstString(app_id, @"5852623");
 
 @interface VKPAuthorizationCoordinator () <VKSdkDelegate>
-@property (nonatomic, strong)   id<VKPUserPersistenceProtocol>      userPersistence;
-
-@property (nonatomic, strong)   UINavigationController              *navigationController;
-@property (nonatomic, strong)   VKPLoginViewConroller               *loginController;
+@property (nonatomic, strong)   UINavigationController  *navigationController;
+@property (nonatomic, strong)   VKPLoginViewController  *loginController;
 
 @end
-
 
 @implementation VKPAuthorizationCoordinator
 
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
+- (instancetype)init {
+    return [self initWithNavigationController:nil];
+}
+
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController {
     self = [super init];
     self.navigationController = navigationController;
-//    self.userPersistence = userPersistence;
-    
-    VKSdk *vksdk = [VKSdk initializeWithAppId:app_id];
-    [vksdk registerDelegate:self];
     
     return self;
 }
@@ -49,15 +43,17 @@ KSConstString(app_id, @"5852623");
 #pragma mark -
 #pragma mark Public
 
+- (void)authorizeInVK {
+    VKSdk *vksdk = [VKSdk initializeWithAppId:app_id];
+    [vksdk registerDelegate:self];
+}
+
 - (UIViewController *)initialViewController {
-//    VKPUser *user = [self.userPersistence savedUser];
-    
     if (nil == self.loginController) {
-        self.loginController = [VKPLoginViewConroller new];
+        self.loginController = [VKPLoginViewController new];
     }
     
     return self.loginController;
-
 }
 
 #pragma mark - VKSdkDelegate
@@ -69,7 +65,6 @@ KSConstString(app_id, @"5852623");
     }
     
     [self.delegate authorizationCoordinatorDidFinishAuthorization:self];
-//    [self showControllerWithClass:[AlbumsViewController class]];
 }
 
 - (void)vkSdkUserAuthorizationFailed {

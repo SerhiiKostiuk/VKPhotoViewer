@@ -9,13 +9,14 @@
 @import UIKit;
 @import Foundation;
 
-@protocol VKPUserPersistenceProtocol;
 @protocol VKPAuthorizationCoordinatorDelegate;
 
 @interface VKPAuthorizationCoordinator : NSObject
 @property (nonatomic, weak) id<VKPAuthorizationCoordinatorDelegate> delegate;
 
-- (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
+- (instancetype)initWithNavigationController:(UINavigationController *)navigationController NS_DESIGNATED_INITIALIZER;
+
+- (void)authorizeInVK;
 
 - (UIViewController *)initialViewController;
 
