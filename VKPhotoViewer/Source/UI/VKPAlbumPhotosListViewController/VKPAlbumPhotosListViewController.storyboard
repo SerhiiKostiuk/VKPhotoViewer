@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album Photos List View Controller-->
+        <scene sceneID="OY0-K3-oHj">
+            <objects>
+                <viewController storyboardIdentifier="VKPAlbumPhotosListViewController" id="Cba-Uw-UXP" customClass="VKPAlbumPhotosListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IOL-8I-99B"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOd-y4-07N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="joA-Y1-n9n" customClass="VKPAlbumPhotosListView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQ3-ya-XJ9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brN-a8-5E1">
+                                        <rect key="frame" x="8" y="22" width="65" height="30"/>
+                                        <state key="normal" title="Back" image="back">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBack:" destination="Cba-Uw-UXP" eventType="touchUpInside" id="aZa-Yx-hkp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.8862745098" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CcU-40-irz"/>
+                                    <constraint firstAttribute="bottom" secondItem="brN-a8-5E1" secondAttribute="bottom" constant="8" id="Dye-uq-R0m"/>
+                                    <constraint firstItem="brN-a8-5E1" firstAttribute="leading" secondItem="yQ3-ya-XJ9" secondAttribute="leading" constant="8" id="JgB-uA-rgE"/>
+                                    <constraint firstItem="brN-a8-5E1" firstAttribute="top" secondItem="yQ3-ya-XJ9" secondAttribute="top" constant="22" id="ecb-pc-OQw"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nrR-T6-vM4">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gJm-q2-xMV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cba-Uw-UXP" id="Bv0-zw-bkg"/>
+                                    <outlet property="delegate" destination="Cba-Uw-UXP" id="Dbj-QA-mHd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yQ3-ya-XJ9" firstAttribute="top" secondItem="IOL-8I-99B" secondAttribute="bottom" constant="-20" id="DHU-SJ-FL6"/>
+                            <constraint firstItem="yQ3-ya-XJ9" firstAttribute="leading" secondItem="joA-Y1-n9n" secondAttribute="leading" id="Swg-3v-H6R"/>
+                            <constraint firstItem="nrR-T6-vM4" firstAttribute="top" secondItem="yQ3-ya-XJ9" secondAttribute="bottom" id="ZNn-jn-Ksc"/>
+                            <constraint firstAttribute="trailing" secondItem="yQ3-ya-XJ9" secondAttribute="trailing" id="dKK-Nl-vUa"/>
+                            <constraint firstItem="EOd-y4-07N" firstAttribute="top" secondItem="nrR-T6-vM4" secondAttribute="bottom" id="kcG-Sl-icU"/>
+                            <constraint firstItem="nrR-T6-vM4" firstAttribute="leading" secondItem="joA-Y1-n9n" secondAttribute="leading" id="mJB-zG-xoT"/>
+                            <constraint firstAttribute="trailing" secondItem="nrR-T6-vM4" secondAttribute="trailing" id="q3m-gg-vAS"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="photosCollectionView" destination="nrR-T6-vM4" id="k6R-fo-WQm"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgc-pT-vUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.59999999999999" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="25" height="25"/>
+    </resources>
+</document>
