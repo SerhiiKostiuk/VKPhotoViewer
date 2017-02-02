@@ -25,7 +25,6 @@ KSConstString(kKSAlbumCellIdentifier, @"VKPAlbumsListTableViewCell");
 @property (nonatomic, strong) VKPAlbumsListView *rootView;
 @property (nonatomic, strong) NSArray *albums;
 
-
 @end
 
 @implementation VKPAlbumsListViewCotroller
@@ -62,9 +61,11 @@ KSConstString(kKSAlbumCellIdentifier, @"VKPAlbumsListTableViewCell");
 #pragma mark Interface Handling
 
 - (IBAction)onLogout:(id)sender {
-    
+    [self.delegate albumsListViewCotrollerDidTapLogout:self];
 }
 
+#pragma mark -
+#pragma mark Private Albums Update
 
 - (void)updateAlbums {
     [MBProgressHUD show];
@@ -106,9 +107,6 @@ KSConstString(kKSAlbumCellIdentifier, @"VKPAlbumsListTableViewCell");
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.delegate albumsListViewCotroller:self didSelectAlbum:self.albums[indexPath.item]];
-    
-//    PhotosViewController *photosController = [[PhotosViewController alloc] initWithAlbum:self.albums[indexPath.row]];
-//    [self.navigationController pushViewController:photosController animated:YES];
 }
 
 @end

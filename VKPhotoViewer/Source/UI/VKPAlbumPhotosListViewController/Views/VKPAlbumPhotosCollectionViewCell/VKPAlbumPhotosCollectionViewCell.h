@@ -1,5 +1,5 @@
 //
-//  VKPAlbumPhotoCollectionViewCell.h
+//  VKPAlbumPhotosCollectionViewCell.h
 //  VKPhotoViewer
 //
 //  Created by Сергій Костюк on 02.02.17.

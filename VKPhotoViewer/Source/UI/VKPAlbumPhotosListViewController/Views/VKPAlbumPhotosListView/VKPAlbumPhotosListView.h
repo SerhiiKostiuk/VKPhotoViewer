@@ -10,5 +10,6 @@
 
 @interface VKPAlbumPhotosListView : UIView
 @property (strong, nonatomic) IBOutlet UICollectionView *photosCollectionView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  VKPAlbumPhotoCollectionViewCell.m
+//  VKPAlbumPhotosCollectionViewCell.m
 //  VKPhotoViewer
 //
 //  Created by Сергій Костюк on 02.02.17.
@@ -13,11 +13,6 @@
 #import "UIView+WebCache.h"
 
 @implementation VKPAlbumPhotosCollectionViewCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
 - (void)prepareForReuse {
     self.thumbImageView.image = nil;

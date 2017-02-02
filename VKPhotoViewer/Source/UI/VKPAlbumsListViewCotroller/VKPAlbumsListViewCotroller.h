@@ -12,7 +12,6 @@
 @protocol VKPAlbumsListViewCotrollerDelegate;
 
 @interface VKPAlbumsListViewCotroller : UIViewController
-
 @property (nonatomic, weak) id<VKPAlbumsListViewCotrollerDelegate>  delegate;
 
 @end
