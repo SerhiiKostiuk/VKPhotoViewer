@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface VKPAppCoordinator : NSObject
+@property (nonatomic, readonly) UINavigationController *navigationViewController;
 
 @end

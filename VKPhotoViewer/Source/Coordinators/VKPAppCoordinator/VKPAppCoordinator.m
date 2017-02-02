@@ -9,48 +9,107 @@
 @import VK_ios_sdk;
 
 #import "VKPAppCoordinator.h"
-#import "UIStoryboard+KSExtensions.h"
 #import "VKPAuthorizationCoordinator.h"
 
+#import "VKPAlbumsListViewCotroller.h"
+#import "VKPAlbumPhotosListViewController.h"
 
+#import "VKPAuthorizationCoordinatorDelegate.h"
+#import "VKPAlbumsListViewCotrollerDelegate.h"
 
-@interface VKPAppCoordinator ()
+#import "UIStoryboard+KSExtensions.h"
+
+@interface VKPAppCoordinator () <VKPAuthorizationCoordinatorDelegate, VKPAlbumsListViewCotrollerDelegate>
 @property (nonatomic, strong) VKPAuthorizationCoordinator *autorizationCoordinator;
 @property (nonatomic, strong) UINavigationController *navigationViewController;
 @end
 
 @implementation VKPAppCoordinator
 
+#pragma mark -
+#pragma mark Initializations and Deallocations
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self compositionRootSetup];
+    }
+    
+    return self;
+}
+
 - (void)compositionRootSetup {
     
     UIStoryboard *storyboard = [UIStoryboard loginStoryboard];
     UINavigationController *navigationController = [storyboard instantiateInitialViewController];
     
+    self.navigationViewController = navigationController;
+    
     self.autorizationCoordinator = [[VKPAuthorizationCoordinator alloc] initWithNavigationController:navigationController];
     
-    UIViewController *initialViewController = [self.autorizationCoordinator initialViewController];
+    [self.autorizationCoordinator authorizeInVK];
+    __weak typeof (self) weakSelf = self;
     
-    self.navigationViewController.viewControllers = @[initialViewController];
+    [VKSdk wakeUpSession:@[@"photos"] completeBlock:^(VKAuthorizationState state, NSError *error) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        if (state == VKAuthorizationAuthorized) {
+            [strongSelf showAlbumListAnimated:NO];
+        } else {
+            
+            
+//            UIViewController *initialViewController = [strongSelf.autorizationCoordinator initialViewController];
+            
+//            strongSelf.navigationViewController.viewControllers = @[initialViewController];
+        }
+    }];
+    
+    
     
 }
 
 - (void)isUserLogin {
-    __weak typeof (self) weakSelf = self;
 
-    
-    [VKSdk wakeUpSession:@[@"photos"] completeBlock:^(VKAuthorizationState state, NSError *error) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-
-        if (state == VKAuthorizationAuthorized) {
-            [self showControllerWithClass:[AlbumsViewController class]];
-        } else {
-            [self showControllerWithClass:[LoginViewController class]];
-        }
-    }];
 }
 
 - (void)showAlbumListAnimated:(BOOL)animated {
+    UINavigationController *navigationController = self.navigationViewController;
     
+    navigationController.navigationBar.hidden = YES;
+
+    UIStoryboard *storyboard = [UIStoryboard albumsListStoryboard];
+    
+    NSString *identifier = NSStringFromClass([VKPAlbumsListViewCotroller class]);
+
+    VKPAlbumsListViewCotroller *albumsListViewController = [storyboard instantiateViewControllerWithIdentifier:identifier];
+    
+    albumsListViewController.delegate = self;
+    
+    [navigationController pushViewController:albumsListViewController animated:animated];
 }
+
+#pragma mark -
+#pragma mark VKPAuthorizationCoordinatorDelegate
+
+- (void)authorizationCoordinatorDidFinishAuthorization:(VKPAuthorizationCoordinator *)authorizationCoordinator {
+    [self showAlbumListAnimated:YES];
+}
+
+#pragma mark - 
+#pragma mark VKPAlbumsListViewCotrollerDelegate
+
+- (void)albumsListViewCotrollerDidTapLogout:(VKPAlbumsListViewCotroller *)albumsListViewController {
+    [VKSdk forceLogout];
+}
+
+- (void)albumsListViewCotroller:(VKPAlbumsListViewCotroller *)albumsListViewController didSelectAlbum:(VKPAlbumModel *)album {
+    
+    UINavigationController *navigationController = self.navigationViewController;
+    
+    VKPAlbumPhotosListViewController *albumPhotosListViewController = [VKPAlbumPhotosListViewController controllerWithAlbum:album];
+    
+    [navigationController pushViewController:albumPhotosListViewController animated:YES];
+}
+
 
 @end
