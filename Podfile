@@ -5,6 +5,8 @@ target 'VKPhotoViewer' do
   use_frameworks!
 
  pod 'VK-ios-sdk'
- pod 'AFNetworking'
+ pod 'MBProgressHUD', '~> 1.0.0'
+ pod 'Mantle'
+ pod 'SDWebImage'
 
 end

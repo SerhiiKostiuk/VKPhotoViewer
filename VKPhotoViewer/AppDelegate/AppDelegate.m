@@ -9,9 +9,14 @@
 @import VK_ios_sdk;
 
 #import "AppDelegate.h"
-#import "UIStoryboard+KSExtensions.h"
+#import "UIWindow+KSExtensions.h"
+#import "VKPLoginViewController.h"
+#import "VKPAppCoordinator.h"
+
+
 
 @interface AppDelegate ()
+@property (nonatomic, strong) VKPAppCoordinator *appCoordinator;
 
 @end
 
@@ -19,7 +24,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIWindow *window = [UIWindow window];
+    VKPAppCoordinator *coordinator = [VKPAppCoordinator new];
+    self.appCoordinator = coordinator;
+    
+    window.rootViewController = coordinator.navigationViewController;
+    
+    self.window = window;
+    [window makeKeyAndVisible];
+
     return YES;
 }
 

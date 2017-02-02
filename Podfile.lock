@@ -1,12 +1,25 @@
 PODS:
-  - VK-ios-sdk (1.3.17)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - MBProgressHUD (1.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
+  - Mantle
+  - MBProgressHUD (~> 1.0.0)
+  - SDWebImage
   - VK-ios-sdk
 
 SPEC CHECKSUMS:
-  VK-ios-sdk: 671b7bc84596da7040544eb848b3c71787906fbd
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: ffda3d330e09809389a7158da63826dcb9d19e32
+PODFILE CHECKSUM: 0ba7de34f084ad3f44cc341d3ce0da141d9b56fc
 
 COCOAPODS: 1.0.0

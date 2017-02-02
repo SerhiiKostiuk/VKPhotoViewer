@@ -8,39 +8,97 @@
 
 /* Begin PBXBuildFile section */
 		8E9A5796E9E0C15CCB49D523 /* Pods_VKPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253F6E82496861ABAAA1F611 /* Pods_VKPhotoViewer.framework */; };
+		CD2359EA1E432627008F26D4 /* VKPAlbumsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359E91E432627008F26D4 /* VKPAlbumsListView.m */; };
+		CD2359EE1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359EC1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m */; };
+		CD2359EF1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2359ED1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib */; };
+		CD2359F61E433DF3008F26D4 /* VKPAlbumPhotosListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359F51E433DF3008F26D4 /* VKPAlbumPhotosListView.m */; };
+		CD2359FD1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2359FC1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard */; };
+		CD235A001E434748008F26D4 /* VKPPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359FF1E434748008F26D4 /* VKPPhotoModel.m */; };
+		CD235A061E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD235A041E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m */; };
+		CD235A071E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD235A051E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.xib */; };
 		CDC1E1761E420E4E009C07A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1641E420E4E009C07A4 /* AppDelegate.m */; };
 		CDC1E17B1E420E4E009C07A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1751E420E4E009C07A4 /* main.m */; };
 		CDC1E17C1E420EDE009C07A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1661E420E4E009C07A4 /* Assets.xcassets */; };
 		CDC1E17D1E420EDE009C07A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1671E420E4E009C07A4 /* LaunchScreen.storyboard */; };
-		CDC1E17E1E420EDE009C07A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1691E420E4E009C07A4 /* Main.storyboard */; };
-		CDC1E1821E4224C1009C07A4 /* VKPLoginViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1811E4224C1009C07A4 /* VKPLoginViewConroller.m */; };
+		CDC1E1821E4224C1009C07A4 /* VKPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1811E4224C1009C07A4 /* VKPLoginViewController.m */; };
 		CDC1E1851E4224D9009C07A4 /* VKPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1841E4224D9009C07A4 /* VKPLoginView.m */; };
-		CDC1E1871E422502009C07A4 /* VKPLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1861E422502009C07A4 /* VKPLoginViewController.storyboard */; };
 		CDC1E18C1E42264E009C07A4 /* UIStoryboard+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E18B1E42264E009C07A4 /* UIStoryboard+KSExtensions.m */; };
 		CDC1E1901E4226D0009C07A4 /* UIWindow+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E18F1E4226D0009C07A4 /* UIWindow+KSExtensions.m */; };
+		CDC1E19D1E4254D4009C07A4 /* VKPAppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E19C1E4254D4009C07A4 /* VKPAppCoordinator.m */; };
+		CDC1E1A11E425676009C07A4 /* VKPAuthorizationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A01E425676009C07A4 /* VKPAuthorizationCoordinator.m */; };
+		CDC1E1A51E42579F009C07A4 /* VKPUserPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */; };
+		CDC1E1A91E425905009C07A4 /* VKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A81E425905009C07A4 /* VKPUser.m */; };
+		CDC1E1AE1E427001009C07A4 /* UIAlertController+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */; };
+		CDC1E1B11E4277B4009C07A4 /* VKPLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1861E422502009C07A4 /* VKPLoginViewController.storyboard */; };
+		CDC1E1B51E4283BF009C07A4 /* VKPAlbumListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */; };
+		CDC1E1B81E428454009C07A4 /* VKPAlbumPhotosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */; };
+		CDC1E1BB1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1BA1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m */; };
+		CDC1E1BF1E428918009C07A4 /* MBProgressHUD+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1BE1E428918009C07A4 /* MBProgressHUD+KSExtensions.m */; };
+		CDC1E1C41E428EEE009C07A4 /* VKPAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1C31E428EEE009C07A4 /* VKPAlbumModel.m */; };
+		CDC1E1C91E429180009C07A4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1C81E429180009C07A4 /* ApiManager.m */; };
+		CDC1E1CB1E429ACF009C07A4 /* VKPAlbumsListViewCotroller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1CA1E429ACF009C07A4 /* VKPAlbumsListViewCotroller.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		253F6E82496861ABAAA1F611 /* Pods_VKPhotoViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotoViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7799A97527BD43D0B57005 /* Pods-VKPhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKPhotoViewer/Pods-VKPhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		C0BD7467B5DCC2E89DA49BBD /* Pods-VKPhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKPhotoViewer/Pods-VKPhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
+		CD2359E81E432627008F26D4 /* VKPAlbumsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListView.h; sourceTree = "<group>"; };
+		CD2359E91E432627008F26D4 /* VKPAlbumsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumsListView.m; sourceTree = "<group>"; };
+		CD2359EB1E43265A008F26D4 /* VKPAlbumsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListTableViewCell.h; sourceTree = "<group>"; };
+		CD2359EC1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumsListTableViewCell.m; sourceTree = "<group>"; };
+		CD2359ED1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VKPAlbumsListTableViewCell.xib; sourceTree = "<group>"; };
+		CD2359F01E4335EE008F26D4 /* VKPAlbumsListViewCotrollerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListViewCotrollerDelegate.h; sourceTree = "<group>"; };
+		CD2359F41E433DF3008F26D4 /* VKPAlbumPhotosListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumPhotosListView.h; sourceTree = "<group>"; };
+		CD2359F51E433DF3008F26D4 /* VKPAlbumPhotosListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumPhotosListView.m; sourceTree = "<group>"; };
+		CD2359FC1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VKPAlbumPhotosListViewController.storyboard; sourceTree = "<group>"; };
+		CD2359FE1E434748008F26D4 /* VKPPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPPhotoModel.h; sourceTree = "<group>"; };
+		CD2359FF1E434748008F26D4 /* VKPPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPPhotoModel.m; sourceTree = "<group>"; };
+		CD235A031E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumPhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		CD235A041E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumPhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		CD235A051E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VKPAlbumPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		CDC1E13E1E4209D4009C07A4 /* VKPhotoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKPhotoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC1E1631E420E4E009C07A4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CDC1E1641E420E4E009C07A4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CDC1E1641E420E4E009C07A4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CDC1E1661E420E4E009C07A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC1E1681E420E4E009C07A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CDC1E16A1E420E4E009C07A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDC1E1741E420E4E009C07A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC1E1751E420E4E009C07A4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CDC1E1801E4224C1009C07A4 /* VKPLoginViewConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPLoginViewConroller.h; sourceTree = "<group>"; };
-		CDC1E1811E4224C1009C07A4 /* VKPLoginViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPLoginViewConroller.m; sourceTree = "<group>"; };
+		CDC1E1801E4224C1009C07A4 /* VKPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = VKPLoginViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CDC1E1811E4224C1009C07A4 /* VKPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = VKPLoginViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CDC1E1831E4224D9009C07A4 /* VKPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPLoginView.h; sourceTree = "<group>"; };
 		CDC1E1841E4224D9009C07A4 /* VKPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPLoginView.m; sourceTree = "<group>"; };
 		CDC1E1861E422502009C07A4 /* VKPLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VKPLoginViewController.storyboard; sourceTree = "<group>"; };
 		CDC1E18A1E42264E009C07A4 /* UIStoryboard+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+KSExtensions.h"; sourceTree = "<group>"; };
-		CDC1E18B1E42264E009C07A4 /* UIStoryboard+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+KSExtensions.m"; sourceTree = "<group>"; };
+		CDC1E18B1E42264E009C07A4 /* UIStoryboard+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIStoryboard+KSExtensions.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CDC1E18E1E4226D0009C07A4 /* UIWindow+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+KSExtensions.h"; sourceTree = "<group>"; };
 		CDC1E18F1E4226D0009C07A4 /* UIWindow+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+KSExtensions.m"; sourceTree = "<group>"; };
+		CDC1E1921E42393D009C07A4 /* KSMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMacro.h; sourceTree = "<group>"; };
+		CDC1E19B1E4254D4009C07A4 /* VKPAppCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAppCoordinator.h; sourceTree = "<group>"; };
+		CDC1E19C1E4254D4009C07A4 /* VKPAppCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAppCoordinator.m; sourceTree = "<group>"; };
+		CDC1E19F1E425676009C07A4 /* VKPAuthorizationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAuthorizationCoordinator.h; sourceTree = "<group>"; };
+		CDC1E1A01E425676009C07A4 /* VKPAuthorizationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = VKPAuthorizationCoordinator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CDC1E1A31E42579F009C07A4 /* VKPUserPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUserPersistence.h; sourceTree = "<group>"; };
+		CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPUserPersistence.m; sourceTree = "<group>"; };
+		CDC1E1A71E425905009C07A4 /* VKPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUser.h; sourceTree = "<group>"; };
+		CDC1E1A81E425905009C07A4 /* VKPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPUser.m; sourceTree = "<group>"; };
+		CDC1E1AA1E42682E009C07A4 /* VKPUserPersistenceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUserPersistenceProtocol.h; sourceTree = "<group>"; };
+		CDC1E1AC1E427001009C07A4 /* UIAlertController+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KSExtensions.h"; sourceTree = "<group>"; };
+		CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KSExtensions.m"; sourceTree = "<group>"; };
+		CDC1E1B01E427130009C07A4 /* VKPAuthorizationCoordinatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAuthorizationCoordinatorDelegate.h; sourceTree = "<group>"; };
+		CDC1E1B31E4283BF009C07A4 /* VKPAlbumListCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumListCoordinator.h; sourceTree = "<group>"; };
+		CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumListCoordinator.m; sourceTree = "<group>"; };
+		CDC1E1B61E428454009C07A4 /* VKPAlbumPhotosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumPhotosListViewController.h; sourceTree = "<group>"; };
+		CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumPhotosListViewController.m; sourceTree = "<group>"; };
+		CDC1E1B91E42881C009C07A4 /* VKPAlbumsListViewCotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListViewCotroller.h; sourceTree = "<group>"; };
+		CDC1E1BA1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumsListViewCotroller.m; sourceTree = "<group>"; };
+		CDC1E1BD1E428918009C07A4 /* MBProgressHUD+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KSExtensions.h"; sourceTree = "<group>"; };
+		CDC1E1BE1E428918009C07A4 /* MBProgressHUD+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KSExtensions.m"; sourceTree = "<group>"; };
+		CDC1E1C21E428EEE009C07A4 /* VKPAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumModel.h; sourceTree = "<group>"; };
+		CDC1E1C31E428EEE009C07A4 /* VKPAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumModel.m; sourceTree = "<group>"; };
+		CDC1E1C71E429180009C07A4 /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		CDC1E1C81E429180009C07A4 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		CDC1E1CA1E429ACF009C07A4 /* VKPAlbumsListViewCotroller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VKPAlbumsListViewCotroller.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +128,62 @@
 				C0BD7467B5DCC2E89DA49BBD /* Pods-VKPhotoViewer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD2359E51E432607008F26D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD2359E61E432607008F26D4 /* VKPAlbumsListTableViewCell */,
+				CD2359E71E432607008F26D4 /* VKPAlbumsListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD2359E61E432607008F26D4 /* VKPAlbumsListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD2359EB1E43265A008F26D4 /* VKPAlbumsListTableViewCell.h */,
+				CD2359EC1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m */,
+				CD2359ED1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib */,
+			);
+			path = VKPAlbumsListTableViewCell;
+			sourceTree = "<group>";
+		};
+		CD2359E71E432607008F26D4 /* VKPAlbumsListView */ = {
+			isa = PBXGroup;
+			children = (
+				CD2359E81E432627008F26D4 /* VKPAlbumsListView.h */,
+				CD2359E91E432627008F26D4 /* VKPAlbumsListView.m */,
+			);
+			path = VKPAlbumsListView;
+			sourceTree = "<group>";
+		};
+		CD2359F11E433DDC008F26D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD235A021E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell */,
+				CD2359F31E433DDC008F26D4 /* VKPAlbumPhotosListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD2359F31E433DDC008F26D4 /* VKPAlbumPhotosListView */ = {
+			isa = PBXGroup;
+			children = (
+				CD2359F41E433DF3008F26D4 /* VKPAlbumPhotosListView.h */,
+				CD2359F51E433DF3008F26D4 /* VKPAlbumPhotosListView.m */,
+			);
+			path = VKPAlbumPhotosListView;
+			sourceTree = "<group>";
+		};
+		CD235A021E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD235A031E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.h */,
+				CD235A041E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m */,
+				CD235A051E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.xib */,
+			);
+			path = VKPAlbumPhotosCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		CDC1E1351E4209D3009C07A4 = {
@@ -115,7 +229,6 @@
 			children = (
 				CDC1E1661E420E4E009C07A4 /* Assets.xcassets */,
 				CDC1E1671E420E4E009C07A4 /* LaunchScreen.storyboard */,
-				CDC1E1691E420E4E009C07A4 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -123,7 +236,9 @@
 		CDC1E16B1E420E4E009C07A4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CDC1E1991E4254D4009C07A4 /* Coordinators */,
 				CDC1E16C1E420E4E009C07A4 /* Library */,
+				CDC1E1C51E429162009C07A4 /* Managers */,
 				CDC1E16D1E420E4E009C07A4 /* Models */,
 				CDC1E16E1E420E4E009C07A4 /* UI */,
 			);
@@ -134,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC1E1881E422619009C07A4 /* Categories */,
+				CDC1E1911E42393D009C07A4 /* Macros */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -141,6 +257,10 @@
 		CDC1E16D1E420E4E009C07A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CDC1E1C01E428E39009C07A4 /* AlbumModel */,
+				CDC1E1C11E428E39009C07A4 /* PhotoModel */,
+				CDC1E1A21E425772009C07A4 /* Persistence */,
+				CDC1E1A61E4258EE009C07A4 /* VKPUser */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +279,10 @@
 		CDC1E16F1E420E4E009C07A4 /* VKPAlbumPhotosListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CD2359F11E433DDC008F26D4 /* Views */,
+				CDC1E1B61E428454009C07A4 /* VKPAlbumPhotosListViewController.h */,
+				CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */,
+				CD2359FC1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard */,
 			);
 			path = VKPAlbumPhotosListViewController;
 			sourceTree = "<group>";
@@ -166,6 +290,11 @@
 		CDC1E1701E420E4E009C07A4 /* VKPAlbumsListViewCotroller */ = {
 			isa = PBXGroup;
 			children = (
+				CD2359E51E432607008F26D4 /* Views */,
+				CDC1E1B91E42881C009C07A4 /* VKPAlbumsListViewCotroller.h */,
+				CDC1E1BA1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m */,
+				CDC1E1CA1E429ACF009C07A4 /* VKPAlbumsListViewCotroller.storyboard */,
+				CD2359F01E4335EE008F26D4 /* VKPAlbumsListViewCotrollerDelegate.h */,
 			);
 			path = VKPAlbumsListViewCotroller;
 			sourceTree = "<group>";
@@ -174,8 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				CDC1E17F1E420F57009C07A4 /* VKPLoginView */,
-				CDC1E1801E4224C1009C07A4 /* VKPLoginViewConroller.h */,
-				CDC1E1811E4224C1009C07A4 /* VKPLoginViewConroller.m */,
+				CDC1E1801E4224C1009C07A4 /* VKPLoginViewController.h */,
+				CDC1E1811E4224C1009C07A4 /* VKPLoginViewController.m */,
 				CDC1E1861E422502009C07A4 /* VKPLoginViewController.storyboard */,
 			);
 			path = VKPLoginViewConroller;
@@ -209,6 +338,8 @@
 		CDC1E1881E422619009C07A4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CDC1E1BC1E428901009C07A4 /* MBProgressHUD */,
+				CDC1E1AB1E427001009C07A4 /* UIAlertContoller */,
 				CDC1E1891E42262F009C07A4 /* UIStoryboard */,
 				CDC1E18D1E4226D0009C07A4 /* UIWindow */,
 			);
@@ -231,6 +362,125 @@
 				CDC1E18F1E4226D0009C07A4 /* UIWindow+KSExtensions.m */,
 			);
 			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		CDC1E1911E42393D009C07A4 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1921E42393D009C07A4 /* KSMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		CDC1E1991E4254D4009C07A4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1B21E4283AD009C07A4 /* VKPAlbumListCoordinator */,
+				CDC1E19A1E4254D4009C07A4 /* VKPAppCoordinator */,
+				CDC1E19E1E425653009C07A4 /* VKPAuthorizationCoordinator */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CDC1E19A1E4254D4009C07A4 /* VKPAppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E19B1E4254D4009C07A4 /* VKPAppCoordinator.h */,
+				CDC1E19C1E4254D4009C07A4 /* VKPAppCoordinator.m */,
+			);
+			path = VKPAppCoordinator;
+			sourceTree = "<group>";
+		};
+		CDC1E19E1E425653009C07A4 /* VKPAuthorizationCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E19F1E425676009C07A4 /* VKPAuthorizationCoordinator.h */,
+				CDC1E1A01E425676009C07A4 /* VKPAuthorizationCoordinator.m */,
+				CDC1E1B01E427130009C07A4 /* VKPAuthorizationCoordinatorDelegate.h */,
+			);
+			path = VKPAuthorizationCoordinator;
+			sourceTree = "<group>";
+		};
+		CDC1E1A21E425772009C07A4 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1A31E42579F009C07A4 /* VKPUserPersistence.h */,
+				CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */,
+				CDC1E1AA1E42682E009C07A4 /* VKPUserPersistenceProtocol.h */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		CDC1E1A61E4258EE009C07A4 /* VKPUser */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1A71E425905009C07A4 /* VKPUser.h */,
+				CDC1E1A81E425905009C07A4 /* VKPUser.m */,
+			);
+			name = VKPUser;
+			path = VKPhotoViewer/Source/Models/VKPUser;
+			sourceTree = SOURCE_ROOT;
+		};
+		CDC1E1AB1E427001009C07A4 /* UIAlertContoller */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1AC1E427001009C07A4 /* UIAlertController+KSExtensions.h */,
+				CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */,
+			);
+			path = UIAlertContoller;
+			sourceTree = "<group>";
+		};
+		CDC1E1B21E4283AD009C07A4 /* VKPAlbumListCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1B31E4283BF009C07A4 /* VKPAlbumListCoordinator.h */,
+				CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */,
+			);
+			path = VKPAlbumListCoordinator;
+			sourceTree = "<group>";
+		};
+		CDC1E1BC1E428901009C07A4 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1BD1E428918009C07A4 /* MBProgressHUD+KSExtensions.h */,
+				CDC1E1BE1E428918009C07A4 /* MBProgressHUD+KSExtensions.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		CDC1E1C01E428E39009C07A4 /* AlbumModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1C21E428EEE009C07A4 /* VKPAlbumModel.h */,
+				CDC1E1C31E428EEE009C07A4 /* VKPAlbumModel.m */,
+			);
+			path = AlbumModel;
+			sourceTree = "<group>";
+		};
+		CDC1E1C11E428E39009C07A4 /* PhotoModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD2359FE1E434748008F26D4 /* VKPPhotoModel.h */,
+				CD2359FF1E434748008F26D4 /* VKPPhotoModel.m */,
+			);
+			path = PhotoModel;
+			sourceTree = "<group>";
+		};
+		CDC1E1C51E429162009C07A4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1C61E429162009C07A4 /* ApiManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CDC1E1C61E429162009C07A4 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				CDC1E1C71E429180009C07A4 /* ApiManager.h */,
+				CDC1E1C81E429180009C07A4 /* ApiManager.m */,
+			);
+			path = ApiManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +545,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC1E1B11E4277B4009C07A4 /* VKPLoginViewController.storyboard in Resources */,
+				CD2359EF1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib in Resources */,
 				CDC1E17C1E420EDE009C07A4 /* Assets.xcassets in Resources */,
+				CD235A071E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.xib in Resources */,
+				CDC1E1CB1E429ACF009C07A4 /* VKPAlbumsListViewCotroller.storyboard in Resources */,
+				CD2359FD1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard in Resources */,
 				CDC1E17D1E420EDE009C07A4 /* LaunchScreen.storyboard in Resources */,
-				CDC1E17E1E420EDE009C07A4 /* Main.storyboard in Resources */,
-				CDC1E1871E422502009C07A4 /* VKPLoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,11 +610,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC1E1C91E429180009C07A4 /* ApiManager.m in Sources */,
+				CDC1E1A51E42579F009C07A4 /* VKPUserPersistence.m in Sources */,
 				CDC1E17B1E420E4E009C07A4 /* main.m in Sources */,
+				CDC1E1B51E4283BF009C07A4 /* VKPAlbumListCoordinator.m in Sources */,
+				CD2359EE1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m in Sources */,
+				CDC1E1BB1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m in Sources */,
 				CDC1E1901E4226D0009C07A4 /* UIWindow+KSExtensions.m in Sources */,
+				CD2359EA1E432627008F26D4 /* VKPAlbumsListView.m in Sources */,
 				CDC1E1761E420E4E009C07A4 /* AppDelegate.m in Sources */,
+				CD2359F61E433DF3008F26D4 /* VKPAlbumPhotosListView.m in Sources */,
+				CD235A001E434748008F26D4 /* VKPPhotoModel.m in Sources */,
+				CDC1E19D1E4254D4009C07A4 /* VKPAppCoordinator.m in Sources */,
+				CDC1E1B81E428454009C07A4 /* VKPAlbumPhotosListViewController.m in Sources */,
 				CDC1E1851E4224D9009C07A4 /* VKPLoginView.m in Sources */,
-				CDC1E1821E4224C1009C07A4 /* VKPLoginViewConroller.m in Sources */,
+				CDC1E1A91E425905009C07A4 /* VKPUser.m in Sources */,
+				CD235A061E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m in Sources */,
+				CDC1E1AE1E427001009C07A4 /* UIAlertController+KSExtensions.m in Sources */,
+				CDC1E1821E4224C1009C07A4 /* VKPLoginViewController.m in Sources */,
+				CDC1E1BF1E428918009C07A4 /* MBProgressHUD+KSExtensions.m in Sources */,
+				CDC1E1C41E428EEE009C07A4 /* VKPAlbumModel.m in Sources */,
+				CDC1E1A11E425676009C07A4 /* VKPAuthorizationCoordinator.m in Sources */,
 				CDC1E18C1E42264E009C07A4 /* UIStoryboard+KSExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,14 +644,6 @@
 				CDC1E1681E420E4E009C07A4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CDC1E1691E420E4E009C07A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDC1E16A1E420E4E009C07A4 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
