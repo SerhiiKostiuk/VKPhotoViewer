@@ -12,6 +12,7 @@
 
 #import "VKPAlbumModel.h"
 #import "ApiManager.h"
+#import "VKPAlbumPhotosListViewControllerDelegate.h"
 
 #import "MBProgressHUD+KSExtensions.h"
 #import "UIStoryboard+KSExtensions.h"
@@ -52,6 +53,7 @@ KSConstString(kKSAlbumPhotosCellIdentifier, @"VKPAlbumPhotosCollectionViewCell")
     
     [self.rootView.photosCollectionView registerNib:[UINib nibWithNibName:kKSAlbumPhotosCellIdentifier bundle:nil] forCellWithReuseIdentifier:kKSAlbumPhotosCellIdentifier];
     
+    self.rootView.titleLabel.text = self.album.title;
     [self updatePhotos];
 }
 
@@ -74,6 +76,7 @@ KSConstString(kKSAlbumPhotosCellIdentifier, @"VKPAlbumPhotosCollectionViewCell")
 #pragma mark Interface Handling
 
 - (IBAction)onBack:(id)sender {
+    [self.delegate albumsPhotosListViewCotrollerDidTapBack:self];
 }
 
 #pragma mark -
@@ -93,6 +96,7 @@ KSConstString(kKSAlbumPhotosCellIdentifier, @"VKPAlbumPhotosCollectionViewCell")
         if (error) {
             [UIAlertController presentAlertControllerWithMessage:error.localizedDescription     inController:strongSelf];
         }
+        
         strongSelf.photos = photos;
     }];
 }
@@ -108,8 +112,11 @@ KSConstString(kKSAlbumPhotosCellIdentifier, @"VKPAlbumPhotosCollectionViewCell")
     return self.photos.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    VKPAlbumPhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kKSAlbumPhotosCellIdentifier forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    VKPAlbumPhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kKSAlbumPhotosCellIdentifier
+                                                                                       forIndexPath:indexPath];
     [cell fillCellWithModel:self.photos[indexPath.row]];
     
     return cell;
@@ -120,8 +127,7 @@ KSConstString(kKSAlbumPhotosCellIdentifier, @"VKPAlbumPhotosCollectionViewCell")
 #pragma mark UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    PhotoViewerViewController *photoViewerController = [[PhotoViewerViewController alloc] initWithPhoto:self.photos[indexPath.row]];
-//    [self.navigationController pushViewController:photoViewerController animated:YES];
+    [self.delegate albumsPhotosListViewCotroller:self didSelectPhoto:self.photos[indexPath.item]];
 }
 
 @end

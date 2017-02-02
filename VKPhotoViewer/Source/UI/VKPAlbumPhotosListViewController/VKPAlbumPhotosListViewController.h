@@ -10,7 +10,11 @@
 
 @class VKPAlbumModel;
 
+@protocol VKPAlbumPhotosListViewControllerDelegate;
+
+
 @interface VKPAlbumPhotosListViewController : UIViewController
+@property (nonatomic, weak) id<VKPAlbumPhotosListViewControllerDelegate>  delegate;
 
 + (instancetype)controllerWithAlbum:(VKPAlbumModel *)album;
 

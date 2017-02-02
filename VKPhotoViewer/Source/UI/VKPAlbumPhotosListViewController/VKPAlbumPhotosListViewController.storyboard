@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,12 +34,21 @@
                                             <action selector="onBack:" destination="Cba-Uw-UXP" eventType="touchUpInside" id="aZa-Yx-hkp"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUT-ca-rbw">
+                                        <rect key="frame" x="88" y="27" width="200.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.8862745098" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="WUT-ca-rbw" firstAttribute="centerY" secondItem="brN-a8-5E1" secondAttribute="centerY" id="9u0-0M-UjC"/>
+                                    <constraint firstItem="WUT-ca-rbw" firstAttribute="centerX" secondItem="yQ3-ya-XJ9" secondAttribute="centerX" id="BPi-Sq-lHv"/>
                                     <constraint firstAttribute="height" constant="60" id="CcU-40-irz"/>
                                     <constraint firstAttribute="bottom" secondItem="brN-a8-5E1" secondAttribute="bottom" constant="8" id="Dye-uq-R0m"/>
                                     <constraint firstItem="brN-a8-5E1" firstAttribute="leading" secondItem="yQ3-ya-XJ9" secondAttribute="leading" constant="8" id="JgB-uA-rgE"/>
+                                    <constraint firstItem="WUT-ca-rbw" firstAttribute="width" secondItem="yQ3-ya-XJ9" secondAttribute="width" multiplier="0.5" constant="13" id="WWE-af-aKO"/>
                                     <constraint firstItem="brN-a8-5E1" firstAttribute="top" secondItem="yQ3-ya-XJ9" secondAttribute="top" constant="22" id="ecb-pc-OQw"/>
                                 </constraints>
                             </view>
@@ -46,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gJm-q2-xMV">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="70" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -70,6 +80,7 @@
                         </constraints>
                         <connections>
                             <outlet property="photosCollectionView" destination="nrR-T6-vM4" id="k6R-fo-WQm"/>
+                            <outlet property="titleLabel" destination="WUT-ca-rbw" id="4dW-jF-RDG"/>
                         </connections>
                     </view>
                 </viewController>
