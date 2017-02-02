@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Detail View Contoller-->
+        <scene sceneID="3j2-yX-GbX">
+            <objects>
+                <viewController storyboardIdentifier="VKPPhotoDetailViewContoller" id="d9f-Gb-h9h" customClass="VKPPhotoDetailViewContoller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GcI-Rd-lgo"/>
+                        <viewControllerLayoutGuide type="bottom" id="66M-hE-AYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="taa-4k-xUg" customClass="VKPPhotoDetailView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjh-xb-e8v">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAz-DC-Sz7">
+                                        <rect key="frame" x="8" y="22" width="65" height="30"/>
+                                        <state key="normal" title="Back" image="back">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBack:" destination="d9f-Gb-h9h" eventType="touchUpInside" id="y9z-cZ-nne"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.8862745098" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OAz-DC-Sz7" secondAttribute="bottom" constant="8" id="5gE-nM-WOZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Dzs-ci-K9K"/>
+                                    <constraint firstItem="OAz-DC-Sz7" firstAttribute="leading" secondItem="wjh-xb-e8v" secondAttribute="leading" constant="8" id="NUu-0N-Jeg"/>
+                                    <constraint firstItem="OAz-DC-Sz7" firstAttribute="top" secondItem="wjh-xb-e8v" secondAttribute="top" constant="22" id="cMQ-cB-BGf"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qGC-85-gmg">
+                                <rect key="frame" x="0.0" y="60" width="375" height="599"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wjh-xb-e8v" firstAttribute="top" secondItem="GcI-Rd-lgo" secondAttribute="bottom" constant="-20" id="2Ze-d7-LQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="wjh-xb-e8v" secondAttribute="trailing" id="3rt-cI-rbV"/>
+                            <constraint firstItem="66M-hE-AYO" firstAttribute="top" secondItem="qGC-85-gmg" secondAttribute="bottom" constant="8" id="EEQ-Se-3Ap"/>
+                            <constraint firstItem="wjh-xb-e8v" firstAttribute="leading" secondItem="taa-4k-xUg" secondAttribute="leading" id="EGM-rh-3h4"/>
+                            <constraint firstItem="qGC-85-gmg" firstAttribute="leading" secondItem="taa-4k-xUg" secondAttribute="leading" id="Eag-R4-y7a"/>
+                            <constraint firstItem="qGC-85-gmg" firstAttribute="top" secondItem="wjh-xb-e8v" secondAttribute="bottom" id="abX-lI-LAh"/>
+                            <constraint firstAttribute="trailing" secondItem="qGC-85-gmg" secondAttribute="trailing" id="hMo-Dw-TdU"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="photoDetailImageView" destination="qGC-85-gmg" id="8Ix-zr-Lc6"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x28-tB-AVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="183.95802098950526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="25" height="25"/>
+    </resources>
+</document>
