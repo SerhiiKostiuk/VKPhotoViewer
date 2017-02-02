@@ -16,9 +16,6 @@
 
 @implementation VKPLoginViewController
 
-//+(instancetype)controllerWithUser:()
-
-
 #pragma mark -
 #pragma mark View Lifecycle
 
@@ -26,8 +23,6 @@
     [super viewDidLoad];
     
     [[VKSdk instance] setUiDelegate:self];
-
-    // Do any additional setup after loading the view.
 }
 
 #pragma mark -

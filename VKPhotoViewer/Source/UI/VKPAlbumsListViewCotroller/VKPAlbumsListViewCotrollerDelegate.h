@@ -14,5 +14,7 @@
 @protocol VKPAlbumsListViewCotrollerDelegate <NSObject>
 
 - (void)albumsListViewCotrollerDidTapLogout:(VKPAlbumsListViewCotroller *)albumsListViewController;
-- (void)albumsListViewCotroller:(VKPAlbumsListViewCotroller *)albumsListViewController didSelectAlbum:(VKPAlbumModel *)album;
+- (void)albumsListViewCotroller:(VKPAlbumsListViewCotroller *)albumsListViewController
+                 didSelectAlbum:(VKPAlbumModel *)album;
+
 @end

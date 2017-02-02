@@ -12,7 +12,6 @@
 #import "UIImageView+WebCache.h"
 #import "UIView+WebCache.h"
 
-
 @interface VKPAlbumsListTableViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *thumbImageView;
 @property (strong, nonatomic) IBOutlet UILabel *albumTitleLabel;
@@ -20,11 +19,6 @@
 @end
 
 @implementation VKPAlbumsListTableViewCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
 - (void)prepareForReuse {
     self.thumbImageView = nil;
