@@ -8,12 +8,24 @@
 
 #import "UIStoryboard+KSExtensions.h"
 
-#import "VKPLoginViewConroller.h"
+#import "VKPLoginViewController.h"
+#import "VKPAlbumsListViewCotroller.h"
+#import "VKPAlbumPhotosListViewController.h"
 
 @implementation UIStoryboard (KSExtensions)
 
 + (instancetype)loginStoryboard {
-    return [UIStoryboard storyboardWithName:NSStringFromClass([VKPLoginViewConroller class])
+    return [UIStoryboard storyboardWithName:NSStringFromClass([VKPLoginViewController class])
+                                     bundle:nil];
+}
+
++ (instancetype)albumsListStoryboard {
+    return [UIStoryboard storyboardWithName:NSStringFromClass([VKPAlbumsListViewCotroller class])
+                                     bundle:nil];
+}
+
++ (instancetype)albumPhotosListStoryboard {
+    return [UIStoryboard storyboardWithName:NSStringFromClass([VKPAlbumPhotosListViewController class])
                                      bundle:nil];
 }
 

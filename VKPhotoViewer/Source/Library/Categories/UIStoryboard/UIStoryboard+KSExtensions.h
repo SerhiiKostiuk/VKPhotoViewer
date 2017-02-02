@@ -11,5 +11,7 @@
 @interface UIStoryboard (KSExtensions)
 
 + (instancetype)loginStoryboard;
++ (instancetype)albumsListStoryboard;
++ (instancetype)albumPhotosListStoryboard;
 
 @end
