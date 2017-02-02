@@ -1,5 +1,5 @@
 //
-//  VKPLoginViewConroller.h
+//  VKPLoginViewController.h
 //  VKPhotoViewer
 //
 //  Created by Сергій Костюк on 01.02.17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VKPLoginViewConroller : UIViewController
+@interface VKPLoginViewController : UIViewController
 
 @end
