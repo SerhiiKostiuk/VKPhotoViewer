@@ -10,6 +10,10 @@
 
 @implementation UIWindow (KSExtensions)
 
+#pragma mark -
+#pragma mark Class Methods
+
+
 + (instancetype)window {
     return [[self alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 }

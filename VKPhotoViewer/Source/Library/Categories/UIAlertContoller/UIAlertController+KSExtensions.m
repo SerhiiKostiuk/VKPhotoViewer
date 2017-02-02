@@ -10,8 +10,8 @@
 
 @implementation UIAlertController (KSExtensions)
 
-#pragma mark - 
-#pragma mark Public
+#pragma mark -
+#pragma mark Class Methods
 
 + (void)presentAlertControllerWithMessage:(NSString *)message inController:(UIViewController *)controller {
     UIAlertController * alert= [UIAlertController alertControllerWithTitle:nil
@@ -21,10 +21,17 @@
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok"
                                                        style:UIAlertActionStyleDefault
                                                      handler:nil];
-    
-    [controller presentViewController:alert animated:YES completion:nil];
-    
     [alert addAction:okAction];
+
+    void (^presentBlock)() = ^{
+        [controller presentViewController:alert animated:YES completion:nil];
+    };
+    
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), presentBlock);
+    } else {
+        presentBlock();
+    }
 }
 
 

@@ -13,5 +13,6 @@
 + (instancetype)loginStoryboard;
 + (instancetype)albumsListStoryboard;
 + (instancetype)albumPhotosListStoryboard;
++ (instancetype)photoDetailStoryboard;
 
 @end

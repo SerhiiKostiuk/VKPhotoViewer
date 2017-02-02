@@ -19,6 +19,16 @@ KSConstString(kKSAlbumThumbSourceKey, @"thumb_src");
 
 @implementation VKPAlbumModel
 
+#pragma mark -
+#pragma mark Private
+
++ (NSValueTransformer *)thumbUrlJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
+#pragma mark - 
+#pragma mark MTLJSONSerializing
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"albumId":kKSAlbumIdKey,
@@ -27,10 +37,6 @@ KSConstString(kKSAlbumThumbSourceKey, @"thumb_src");
              @"albumDescription":kKSAlbumDescriptionKey,
              @"thumbUrl":kKSAlbumThumbSourceKey,
              };
-}
-
-+ (NSValueTransformer *)thumbUrlJSONTransformer {
-    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 @end

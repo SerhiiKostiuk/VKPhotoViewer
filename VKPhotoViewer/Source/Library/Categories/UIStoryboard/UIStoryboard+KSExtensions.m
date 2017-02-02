@@ -11,8 +11,12 @@
 #import "VKPLoginViewController.h"
 #import "VKPAlbumsListViewCotroller.h"
 #import "VKPAlbumPhotosListViewController.h"
+#import "VKPPhotoDetailViewContoller.h"
 
 @implementation UIStoryboard (KSExtensions)
+
+#pragma mark -
+#pragma mark Class Methods
 
 + (instancetype)loginStoryboard {
     return [UIStoryboard storyboardWithName:NSStringFromClass([VKPLoginViewController class])
@@ -26,6 +30,11 @@
 
 + (instancetype)albumPhotosListStoryboard {
     return [UIStoryboard storyboardWithName:NSStringFromClass([VKPAlbumPhotosListViewController class])
+                                     bundle:nil];
+}
+
++ (instancetype)photoDetailStoryboard {
+    return [UIStoryboard storyboardWithName:NSStringFromClass([VKPPhotoDetailViewContoller class])
                                      bundle:nil];
 }
 

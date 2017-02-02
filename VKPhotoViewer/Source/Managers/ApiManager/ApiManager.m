@@ -17,10 +17,16 @@
 KSConstString(kKSRequestAlbumsString, @"photos.getAlbums");
 KSConstString(kKSNeedCoversString, @"need_covers");
 
+KSConstString(kKSParametersOwnerIdString, @"owner_id");
+KSConstString(kKSParametersAlbumIdString, @"album_id");
+KSConstString(kKSParametersPhotosSizesString, @"photo_sizes");
+
 KSConstString(kKSRequestPhotosString, @"photos.get");
 
-
 @implementation ApiManager
+
+#pragma mark -
+#pragma mark Singelton
 
 + (instancetype)sharedApiManager {
     static id apiManager;
@@ -33,6 +39,8 @@ KSConstString(kKSRequestPhotosString, @"photos.get");
     return apiManager;
 }
 
+#pragma mark -
+#pragma mark Public Request Methods 
 
 - (VKRequest *)getAlbumsWithCompletion:(getAlbumsCompletion)completion  {
     NSDictionary *parameters = @{VK_API_OWNER_ID:[VKSdk accessToken].userId, kKSNeedCoversString:@1};
@@ -60,7 +68,9 @@ KSConstString(kKSRequestPhotosString, @"photos.get");
 }
 
 - (VKRequest *)getPhotosFromAlbum:(VKPAlbumModel *)album withCompletion:(getPhotosCompletion)completion {
-    NSDictionary *parameters = @{@"owner_id" : album.ownerId, @"album_id" : album.albumId, @"photo_sizes" : @1 };
+    NSDictionary *parameters = @{ kKSParametersOwnerIdString : album.ownerId,
+                                  kKSParametersAlbumIdString : album.albumId,
+                                  kKSParametersPhotosSizesString : @1 };
     
     VKRequest *request = [VKRequest requestWithMethod:kKSRequestPhotosString parameters:parameters];
     

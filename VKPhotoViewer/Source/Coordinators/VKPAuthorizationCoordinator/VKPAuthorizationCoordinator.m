@@ -17,6 +17,7 @@
 #import "KSMacro.h"
 
 KSConstString(app_id, @"5852623");
+KSConstString(kKSAuthorizationErrorMessage, @"Authorization failed");
 
 @interface VKPAuthorizationCoordinator () <VKSdkDelegate>
 @property (nonatomic, strong)   UINavigationController  *navigationController;
@@ -50,13 +51,16 @@ KSConstString(app_id, @"5852623");
 
 - (UIViewController *)initialViewController {
     if (nil == self.loginController) {
-        self.loginController = [VKPLoginViewController new];
+        if ([self.navigationController.viewControllers[0] isKindOfClass:[VKPLoginViewController class]]) {
+            self.loginController = self.navigationController.viewControllers[0];
+        }
     }
     
     return self.loginController;
 }
 
-#pragma mark - VKSdkDelegate
+#pragma mark - 
+#pragma mark VKSdkDelegate
 
 - (void)vkSdkAccessAuthorizationFinishedWithResult:(VKAuthorizationResult *)result {
     if (result.error) {
@@ -68,7 +72,7 @@ KSConstString(app_id, @"5852623");
 }
 
 - (void)vkSdkUserAuthorizationFailed {
-    [UIAlertController presentAlertControllerWithMessage:@"Authorization failed" inController:self.loginController];
+    [UIAlertController presentAlertControllerWithMessage:kKSAuthorizationErrorMessage inController:self.loginController];
 }
 
 @end

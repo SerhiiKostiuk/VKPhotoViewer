@@ -12,7 +12,6 @@
 
 @implementation MBProgressHUD (KSExtensions)
 
-
 #pragma mark -
 #pragma mark Class Methods
 

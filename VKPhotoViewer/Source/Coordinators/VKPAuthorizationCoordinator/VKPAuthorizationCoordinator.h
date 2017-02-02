@@ -11,7 +11,7 @@
 
 @protocol VKPAuthorizationCoordinatorDelegate;
 
-@interface VKPAuthorizationCoordinator : NSObject
+@interface VKPAuthorizationCoordinator : NSObject <VKSdkDelegate>
 @property (nonatomic, weak) id<VKPAuthorizationCoordinatorDelegate> delegate;
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController NS_DESIGNATED_INITIALIZER;
