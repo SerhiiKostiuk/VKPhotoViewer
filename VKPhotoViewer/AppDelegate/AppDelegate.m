@@ -22,7 +22,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow *window = [UIWindow window];
     VKPAppCoordinator *coordinator = [VKPAppCoordinator new];
@@ -65,6 +64,11 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
     [VKSdk processOpenURL:url fromApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [VKSdk processOpenURL:url fromApplication:sourceApplication];
     return YES;
 }
 

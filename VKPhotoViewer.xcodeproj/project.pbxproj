@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8E9A5796E9E0C15CCB49D523 /* Pods_VKPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253F6E82496861ABAAA1F611 /* Pods_VKPhotoViewer.framework */; };
+		CD0380F61E4369BC00E17136 /* VKPPhotoDetailViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0380F51E4369BC00E17136 /* VKPPhotoDetailViewContoller.m */; };
+		CD0380FA1E4369E000E17136 /* VKPPhotoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0380F91E4369E000E17136 /* VKPPhotoDetailView.m */; };
+		CD0380FC1E4369F000E17136 /* VKPPhotoDetailViewContoller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0380FB1E4369F000E17136 /* VKPPhotoDetailViewContoller.storyboard */; };
 		CD2359EA1E432627008F26D4 /* VKPAlbumsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359E91E432627008F26D4 /* VKPAlbumsListView.m */; };
 		CD2359EE1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2359EC1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m */; };
 		CD2359EF1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD2359ED1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib */; };
@@ -26,11 +29,8 @@
 		CDC1E1901E4226D0009C07A4 /* UIWindow+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E18F1E4226D0009C07A4 /* UIWindow+KSExtensions.m */; };
 		CDC1E19D1E4254D4009C07A4 /* VKPAppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E19C1E4254D4009C07A4 /* VKPAppCoordinator.m */; };
 		CDC1E1A11E425676009C07A4 /* VKPAuthorizationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A01E425676009C07A4 /* VKPAuthorizationCoordinator.m */; };
-		CDC1E1A51E42579F009C07A4 /* VKPUserPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */; };
-		CDC1E1A91E425905009C07A4 /* VKPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1A81E425905009C07A4 /* VKPUser.m */; };
 		CDC1E1AE1E427001009C07A4 /* UIAlertController+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */; };
 		CDC1E1B11E4277B4009C07A4 /* VKPLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC1E1861E422502009C07A4 /* VKPLoginViewController.storyboard */; };
-		CDC1E1B51E4283BF009C07A4 /* VKPAlbumListCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */; };
 		CDC1E1B81E428454009C07A4 /* VKPAlbumPhotosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */; };
 		CDC1E1BB1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1BA1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m */; };
 		CDC1E1BF1E428918009C07A4 /* MBProgressHUD+KSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC1E1BE1E428918009C07A4 /* MBProgressHUD+KSExtensions.m */; };
@@ -43,6 +43,13 @@
 		253F6E82496861ABAAA1F611 /* Pods_VKPhotoViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotoViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7799A97527BD43D0B57005 /* Pods-VKPhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKPhotoViewer/Pods-VKPhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		C0BD7467B5DCC2E89DA49BBD /* Pods-VKPhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKPhotoViewer/Pods-VKPhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
+		CD0380F31E43674300E17136 /* VKPAlbumPhotosListViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumPhotosListViewControllerDelegate.h; sourceTree = "<group>"; };
+		CD0380F41E4369BC00E17136 /* VKPPhotoDetailViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPPhotoDetailViewContoller.h; sourceTree = "<group>"; };
+		CD0380F51E4369BC00E17136 /* VKPPhotoDetailViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPPhotoDetailViewContoller.m; sourceTree = "<group>"; };
+		CD0380F81E4369E000E17136 /* VKPPhotoDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPPhotoDetailView.h; sourceTree = "<group>"; };
+		CD0380F91E4369E000E17136 /* VKPPhotoDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPPhotoDetailView.m; sourceTree = "<group>"; };
+		CD0380FB1E4369F000E17136 /* VKPPhotoDetailViewContoller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VKPPhotoDetailViewContoller.storyboard; sourceTree = "<group>"; };
+		CD0380FD1E4376A700E17136 /* VKPPhotoDetailViewContollerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPPhotoDetailViewContollerDelegate.h; sourceTree = "<group>"; };
 		CD2359E81E432627008F26D4 /* VKPAlbumsListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListView.h; sourceTree = "<group>"; };
 		CD2359E91E432627008F26D4 /* VKPAlbumsListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumsListView.m; sourceTree = "<group>"; };
 		CD2359EB1E43265A008F26D4 /* VKPAlbumsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListTableViewCell.h; sourceTree = "<group>"; };
@@ -78,16 +85,9 @@
 		CDC1E19C1E4254D4009C07A4 /* VKPAppCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAppCoordinator.m; sourceTree = "<group>"; };
 		CDC1E19F1E425676009C07A4 /* VKPAuthorizationCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAuthorizationCoordinator.h; sourceTree = "<group>"; };
 		CDC1E1A01E425676009C07A4 /* VKPAuthorizationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = VKPAuthorizationCoordinator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		CDC1E1A31E42579F009C07A4 /* VKPUserPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUserPersistence.h; sourceTree = "<group>"; };
-		CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPUserPersistence.m; sourceTree = "<group>"; };
-		CDC1E1A71E425905009C07A4 /* VKPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUser.h; sourceTree = "<group>"; };
-		CDC1E1A81E425905009C07A4 /* VKPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPUser.m; sourceTree = "<group>"; };
-		CDC1E1AA1E42682E009C07A4 /* VKPUserPersistenceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPUserPersistenceProtocol.h; sourceTree = "<group>"; };
 		CDC1E1AC1E427001009C07A4 /* UIAlertController+KSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+KSExtensions.h"; sourceTree = "<group>"; };
 		CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+KSExtensions.m"; sourceTree = "<group>"; };
 		CDC1E1B01E427130009C07A4 /* VKPAuthorizationCoordinatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAuthorizationCoordinatorDelegate.h; sourceTree = "<group>"; };
-		CDC1E1B31E4283BF009C07A4 /* VKPAlbumListCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumListCoordinator.h; sourceTree = "<group>"; };
-		CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumListCoordinator.m; sourceTree = "<group>"; };
 		CDC1E1B61E428454009C07A4 /* VKPAlbumPhotosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumPhotosListViewController.h; sourceTree = "<group>"; };
 		CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKPAlbumPhotosListViewController.m; sourceTree = "<group>"; };
 		CDC1E1B91E42881C009C07A4 /* VKPAlbumsListViewCotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKPAlbumsListViewCotroller.h; sourceTree = "<group>"; };
@@ -128,6 +128,15 @@
 				C0BD7467B5DCC2E89DA49BBD /* Pods-VKPhotoViewer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD0380F71E4369D000E17136 /* VKPPhotoDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				CD0380F81E4369E000E17136 /* VKPPhotoDetailView.h */,
+				CD0380F91E4369E000E17136 /* VKPPhotoDetailView.m */,
+			);
+			path = VKPPhotoDetailView;
 			sourceTree = "<group>";
 		};
 		CD2359E51E432607008F26D4 /* Views */ = {
@@ -259,8 +268,6 @@
 			children = (
 				CDC1E1C01E428E39009C07A4 /* AlbumModel */,
 				CDC1E1C11E428E39009C07A4 /* PhotoModel */,
-				CDC1E1A21E425772009C07A4 /* Persistence */,
-				CDC1E1A61E4258EE009C07A4 /* VKPUser */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 				CDC1E1B61E428454009C07A4 /* VKPAlbumPhotosListViewController.h */,
 				CDC1E1B71E428454009C07A4 /* VKPAlbumPhotosListViewController.m */,
 				CD2359FC1E433F12008F26D4 /* VKPAlbumPhotosListViewController.storyboard */,
+				CD0380F31E43674300E17136 /* VKPAlbumPhotosListViewControllerDelegate.h */,
 			);
 			path = VKPAlbumPhotosListViewController;
 			sourceTree = "<group>";
@@ -313,6 +321,11 @@
 		CDC1E1721E420E4E009C07A4 /* VKPPhotoDetailViewContoller */ = {
 			isa = PBXGroup;
 			children = (
+				CD0380F71E4369D000E17136 /* VKPPhotoDetailView */,
+				CD0380F41E4369BC00E17136 /* VKPPhotoDetailViewContoller.h */,
+				CD0380F51E4369BC00E17136 /* VKPPhotoDetailViewContoller.m */,
+				CD0380FB1E4369F000E17136 /* VKPPhotoDetailViewContoller.storyboard */,
+				CD0380FD1E4376A700E17136 /* VKPPhotoDetailViewContollerDelegate.h */,
 			);
 			path = VKPPhotoDetailViewContoller;
 			sourceTree = "<group>";
@@ -375,7 +388,6 @@
 		CDC1E1991E4254D4009C07A4 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				CDC1E1B21E4283AD009C07A4 /* VKPAlbumListCoordinator */,
 				CDC1E19A1E4254D4009C07A4 /* VKPAppCoordinator */,
 				CDC1E19E1E425653009C07A4 /* VKPAuthorizationCoordinator */,
 			);
@@ -401,26 +413,6 @@
 			path = VKPAuthorizationCoordinator;
 			sourceTree = "<group>";
 		};
-		CDC1E1A21E425772009C07A4 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				CDC1E1A31E42579F009C07A4 /* VKPUserPersistence.h */,
-				CDC1E1A41E42579F009C07A4 /* VKPUserPersistence.m */,
-				CDC1E1AA1E42682E009C07A4 /* VKPUserPersistenceProtocol.h */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		CDC1E1A61E4258EE009C07A4 /* VKPUser */ = {
-			isa = PBXGroup;
-			children = (
-				CDC1E1A71E425905009C07A4 /* VKPUser.h */,
-				CDC1E1A81E425905009C07A4 /* VKPUser.m */,
-			);
-			name = VKPUser;
-			path = VKPhotoViewer/Source/Models/VKPUser;
-			sourceTree = SOURCE_ROOT;
-		};
 		CDC1E1AB1E427001009C07A4 /* UIAlertContoller */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,15 +420,6 @@
 				CDC1E1AD1E427001009C07A4 /* UIAlertController+KSExtensions.m */,
 			);
 			path = UIAlertContoller;
-			sourceTree = "<group>";
-		};
-		CDC1E1B21E4283AD009C07A4 /* VKPAlbumListCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				CDC1E1B31E4283BF009C07A4 /* VKPAlbumListCoordinator.h */,
-				CDC1E1B41E4283BF009C07A4 /* VKPAlbumListCoordinator.m */,
-			);
-			path = VKPAlbumListCoordinator;
 			sourceTree = "<group>";
 		};
 		CDC1E1BC1E428901009C07A4 /* MBProgressHUD */ = {
@@ -545,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0380FC1E4369F000E17136 /* VKPPhotoDetailViewContoller.storyboard in Resources */,
 				CDC1E1B11E4277B4009C07A4 /* VKPLoginViewController.storyboard in Resources */,
 				CD2359EF1E43265A008F26D4 /* VKPAlbumsListTableViewCell.xib in Resources */,
 				CDC1E17C1E420EDE009C07A4 /* Assets.xcassets in Resources */,
@@ -611,9 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC1E1C91E429180009C07A4 /* ApiManager.m in Sources */,
-				CDC1E1A51E42579F009C07A4 /* VKPUserPersistence.m in Sources */,
 				CDC1E17B1E420E4E009C07A4 /* main.m in Sources */,
-				CDC1E1B51E4283BF009C07A4 /* VKPAlbumListCoordinator.m in Sources */,
 				CD2359EE1E43265A008F26D4 /* VKPAlbumsListTableViewCell.m in Sources */,
 				CDC1E1BB1E42881C009C07A4 /* VKPAlbumsListViewCotroller.m in Sources */,
 				CDC1E1901E4226D0009C07A4 /* UIWindow+KSExtensions.m in Sources */,
@@ -624,7 +606,8 @@
 				CDC1E19D1E4254D4009C07A4 /* VKPAppCoordinator.m in Sources */,
 				CDC1E1B81E428454009C07A4 /* VKPAlbumPhotosListViewController.m in Sources */,
 				CDC1E1851E4224D9009C07A4 /* VKPLoginView.m in Sources */,
-				CDC1E1A91E425905009C07A4 /* VKPUser.m in Sources */,
+				CD0380F61E4369BC00E17136 /* VKPPhotoDetailViewContoller.m in Sources */,
+				CD0380FA1E4369E000E17136 /* VKPPhotoDetailView.m in Sources */,
 				CD235A061E4361DE008F26D4 /* VKPAlbumPhotosCollectionViewCell.m in Sources */,
 				CDC1E1AE1E427001009C07A4 /* UIAlertController+KSExtensions.m in Sources */,
 				CDC1E1821E4224C1009C07A4 /* VKPLoginViewController.m in Sources */,
